@@ -1,0 +1,15 @@
+<h1><%= @movie.title %></h1>
+<h2><%= @movie.year %></h2>
+<p><%= @movie.director %></h1>
+<p><%= @movie.description %></p>
+<p>Rating: <%= @movie.rating %>/10</p>
+<h3>Reviews</h3>
+<% @reviews.each do |review|%>
+	<p><%= review.comment %></p>
+	<p>Score:<%= review.score %>/10</p>
+	<p><%= review.judgement %></p>
+	<p><%= review.user%></p>
+<% end %>
+
+
+MAKE IT DO USER NAME, MAKE IT HAVE POSTER IMAGE, MAKE IT SEE WHAT USERS HAVE SEEN MOVIE
