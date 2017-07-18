@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <nav>
+      <p><%= link_to "Movies", movies_path %></p>
+      <p><%= link_to "Create New Movie", new_movie_path %></p>
+    </nav>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
