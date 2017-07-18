@@ -14,7 +14,6 @@ user1 = User.create!({
 })
 
 movie1 = Movie.create!({
-	user_id: user1.id,
 	title: "Back to the Future",
 	year: 1985,
 	description: "A teenager from 1985 travels back in time to 1955 and has to help his parents fall in love.",
@@ -23,7 +22,6 @@ movie1 = Movie.create!({
 })
 
 movie2 = Movie.create!({
-	user_id: user1.id,
 	title: "Inception",
 	year: 2010,
 	description: "A theif who enters people's dreams must perform the seemingly-impossible act of inception if he ever wants to see his children again.",
@@ -32,7 +30,6 @@ movie2 = Movie.create!({
 })
 
 movie3 = Movie.create!({
-	user_id: user1.id,
 	title: "Jumanji",
 	year: 1995,
 	description: "Robin Williams gets sucked into a board game and there are CGI animals.",
@@ -41,7 +38,6 @@ movie3 = Movie.create!({
 })
 
 movie4 = Movie.create!({
-	user_id: user1.id,
 	title: "Taxi Driver",
 	year: 1976,
 	description: "A socially-awkward taxi driver edges towards violent madness in 1970s New York.",
@@ -79,4 +75,24 @@ review4 = Review.create!({
 	comment: "An incredibly intense performance from Robert De Niro.",
 	score: 8,
 	judgement: true
+})
+
+UserMovie.create!({
+	user_id: user1.id,
+	movie_id: movie1.id
+})
+
+UserMovie.create!({
+	user_id: user1.id,
+	movie_id: movie2.id
+})
+
+UserMovie.create!({
+	user_id: user1.id,
+	movie_id: movie3.id
+})
+
+UserMovie.create!({
+	user_id: user1.id,
+	movie_id: movie4.id
 })

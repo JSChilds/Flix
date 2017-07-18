@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717142722) do
+ActiveRecord::Schema.define(version: 20170718131430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "movies", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "title"
     t.integer "year"
     t.string "description"
     t.string "director"
     t.integer "rating"
-    t.index ["user_id"], name: "index_movies_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -33,6 +31,13 @@ ActiveRecord::Schema.define(version: 20170717142722) do
     t.boolean "judgement"
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "user_movies", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "movie_id"
+    t.index ["movie_id"], name: "index_user_movies_on_movie_id"
+    t.index ["user_id"], name: "index_user_movies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
