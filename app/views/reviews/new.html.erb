@@ -1,5 +1,36 @@
 <h1>Add New Review</h1>
+<%= form_with(model: @review, local: true) do |form| %>
+<%= form.hidden_field :movie_id, :value => params[:movie_id] %>
+	<% if @review.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this @review from being saved:</h2>
 
-<%= render "form", review: @review %>
+	      <ul>
+	      <% @review.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= form.label :comment %>
+	    <%= form.text_field :comment, id: :review_comment %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :score %>
+	    <%= form.number_field :score, id: :review_score %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :Recommend? %>
+	    <%= form.check_box :judgement, id: :review_judgement %>
+	   </div>
+
+	  <div class="actions">
+	    <%= form.submit %>
+	  </div>
+<% end %>
 
 <button><%= link_to "Back", movies_path %></button>
