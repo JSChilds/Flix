@@ -5,16 +5,17 @@
 <p>Rating: <%= @movie.rating %>/10</p>
 <h3>Reviews</h3>
 <% @reviews.each do |review|%>
-	<p><%= review.user.name%></p>
+	<h4><%= review.user.name%></h4>
 	<p><%= review.comment %></p>
 	<p>Score: <%= review.score %>/10</p>
 	<p><%= review.judgement %></p>
 	<% if current_user.id == review.user_id %>
 		<button><%= link_to 'Edit review', edit_review_path(review) %></button>
+		<button><%= link_to 'Delete review', review, method: :delete %></button>
 	<% end %>
 <% end %>
 <br>
 <br>
-<button><%= link_to 'Review', new_review_path(:movie_id => @movie.id) %></button>
-<button><%= link_to 'Edit', edit_movie_path(@movie) %></button>
+<button><%= link_to 'Review movie', new_review_path(:movie_id => @movie.id) %></button>
+<button><%= link_to 'Edit movie', edit_movie_path(@movie) %></button>
 <button><%= link_to 'Back', movies_path %></button>
