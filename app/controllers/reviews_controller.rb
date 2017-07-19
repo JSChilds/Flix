@@ -17,8 +17,9 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.create(review_params)
+		@review.user_id = current_user.id
 		@review.save
-		redirect_to @review
+		redirect_to movies_path
 	end
 
 	def update
@@ -33,6 +34,6 @@ class ReviewsController < ApplicationController
 
 	private
 		def review_params
-	      params.require(:review).permit(:title, :year, :director, :description)
+	      params.require(:review).permit(:movie_id, :comment, :score, :judgement)
 	    end
 end	
