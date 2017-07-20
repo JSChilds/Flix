@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 	def index
-		@reviews = Review.all
+		redirect_to movies_path
 	end
 
 	def show
@@ -9,6 +9,9 @@ class ReviewsController < ApplicationController
 
 	def edit
 		@review = Review.find(params[:id])
+		if @review.user_id != current_user.id
+			redirect_to movies_path
+		end
 	end
 
 	def new

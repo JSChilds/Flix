@@ -9,9 +9,13 @@
   </head>
 
   <body>
+    <ul class="hmenu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
+    </ul>
     <nav>
       <li><%= link_to "Movies", movies_path %></li>
-      <li><%= link_to "Create New Movie", new_movie_path %></li>
+      <li><%= link_to "Add New Movie", new_movie_path %></li>
       <li><%= link_to "Users", users_path %></li>
     </nav>
   	<p class="notice"><%= notice %></p>

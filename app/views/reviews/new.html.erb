@@ -20,7 +20,7 @@
 
 	  <div class="field">
 	    <%= form.label :score %>
-	    <%= form.number_field :score, id: :review_score %>
+	    <%= form.number_field :score, max: 10, id: :review_score %>
 	  </div>
 
 	  <div class="field">
@@ -33,4 +33,4 @@
 	  </div>
 <% end %>
 
-<button><%= link_to "Back", movie_path(params[:movie_id]) %></button>
+<%= link_to "Back", movie_path(params[:movie_id]) %>

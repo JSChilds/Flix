@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.integer :year
       t.string :description
       t.string :director
-      t.integer :rating
+      t.integer :rating, default: 0
     end
   end
 end

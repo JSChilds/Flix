@@ -11,7 +11,8 @@ user1 = User.create!({
 	name: "JoeChilds",
 	email: "joe@hotmail.com",
 	encrypted_password: 'password',
-	password: "password"
+	password: "password",
+	is_admin: true
 })
 
 movie1 = Movie.create!({

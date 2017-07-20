@@ -20,14 +20,14 @@ ActiveRecord::Schema.define(version: 20170718131430) do
     t.integer "year"
     t.string "description"
     t.string "director"
-    t.integer "rating"
+    t.integer "rating", default: 0
   end
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "movie_id"
     t.string "comment"
-    t.integer "score"
+    t.integer "score", default: 0
     t.boolean "judgement"
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170718131430) do
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
     t.string "name"
+    t.boolean "is_admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
