@@ -1,9 +1,13 @@
-<% @movies.each do |movie| %>
-	<div class="col-md-3">
-		<h1><%= link_to movie.title, movie %></h1>
-		<p><%= movie.year %></p>
-		<p><%= movie.director %></p>
-		<p>Rating: <%= movie.rating %>/10</p>
-		<p><%= movie.reviews.length %> reviews</p>
-	</div>
-<% end %>
+<div class="row">
+	<% @movies.each do |movie| %>
+		<div class="col-md-3">
+			<div class="movie-tile">
+				<h1><%= link_to movie.title, movie %></h1>
+				<p><%= movie.year %></p>
+				<p><%= movie.director %></p>
+				<p>Rating: <%= calculate_rating(movie.reviews) %>/10</p>
+				<p><%= movie.reviews.length %> reviews</p>
+			</div>
+		</div>
+	<% end %>
+</div>

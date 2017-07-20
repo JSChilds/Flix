@@ -2,7 +2,7 @@
 <h2><%= @movie.year %></h2>
 <p><%= @movie.director %></h1>
 <p><%= @movie.description %></p>
-<p>Rating: <%= @movie.rating %>/10</p>
+<p>Rating: <%= calculate_rating(@reviews) %>/10</p>
 <h3>Reviews</h3>
 <% @reviews.each do |review|%>
 	<h4><%= link_to "#{review.user.name} says...", review %></h4>

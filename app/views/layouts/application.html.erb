@@ -15,21 +15,39 @@
 
   <body>
     <div class="container">
-      <div class="row">
+      <div class="row">    
           <ul class="hmenu">
-            <%= render 'devise/menu/registration_items' %>
+            <div class="col-sm-4">
+              <div class="logo-tile">
+                <%= image_tag "logo.png", class: "logo" %>
+              </div>
+            </div>
+
             <%= render 'devise/menu/login_items' %>
+            <%= render 'devise/menu/registration_items' %>
+
+            <div class="col-sm-1">
+              <div class="nav-tile">
+                <%= link_to "Movies", movies_path %>
+              </div>
+            </div>
+
+            <div class="col-sm-1">
+              <div class="nav-tile">
+                <%= link_to "Add Movie", new_movie_path %>
+              </div>
+            </div>
+
+            <div class="col-sm-1">
+              <div class="nav-tile">
+                <%= link_to "Users", users_path %>
+              </div>
+            </div>
           </ul>
-          <nav>
-            <li><%= link_to "Movies", movies_path %></li>
-            <li><%= link_to "Add New Movie", new_movie_path %></li>
-            <li><%= link_to "Users", users_path %></li>
-          </nav>
         	<p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
           </div>
-        </div>
-    </div>
+      </div>
       <%= yield %>
   </body>
 </html>

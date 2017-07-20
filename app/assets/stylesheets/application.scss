@@ -17,6 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+nav {
+	list-style: none;
+	display: inline;
+}
+
+
 ul.hmenu {
   list-style: none;	
   margin: 0 0 2em;
@@ -27,7 +33,37 @@ ul.hmenu li {
   display: inline;  
 }
 
-.col-md-3 {
+.movie-tile {
 	height: 400px;
+	border: solid black 1px;
+	border-radius: 10%;
+	margin-top: 20px;
+}
+
+.nav-tile {
+	width: 100px;
+	height: 200px;
+	text-align: center;
+	border: solid black 1px;
+	padding-top: 100px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+	background-color: silver;
+}
+
+.logo {
+	height: 100%;
+	width: 100%;
+}
+
+.logo-tile {
+	height: 200px;
+	width: 100%;
 	border: solid black 1px;
 }

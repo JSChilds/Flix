@@ -1,9 +1,8 @@
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Edit details', edit_user_registration_path) %>
-  </li>
 <% else %>
-  <li>
-  <%= link_to('Sign up', new_user_registration_path)  %>
-  </li>
+	<div class="col-sm-1">
+		<div class="nav-tile">
+  			<li><%= link_to('Sign up', new_user_registration_path)  %></li>
+  		</div>
+  	</div>
 <% end %>
