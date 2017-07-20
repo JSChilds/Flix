@@ -1,19 +1,32 @@
-<h1><%= @movie.title %></h1>
-<h2><%= @movie.year %></h2>
-<p><%= @movie.director %></h1>
-<p><%= @movie.description %></p>
-<p>Rating: <%= calculate_rating(@reviews) %>/10</p>
-<h3>Reviews</h3>
-<% @reviews.each do |review|%>
-	<h4><%= link_to "#{review.user.name} says...", review %></h4>
-	<p>Score: <%= review.score %>/10</p>
-	<p><%= review.judgement %></p>
-<% end %>
-<% if current_user.is_admin %>
-	<button><%= link_to 'Edit movie', edit_movie_path(@movie) %></button>
-	<button><%= link_to 'Delete movie', @movie, method: :delete %></button>
-<% end %>
-<button><%= link_to @seen_text, seen_movie_path, method: :put %></button>
-<button><%= link_to 'Review movie', new_review_path(:movie_id => @movie.id) %></button>
+<div class="movie-show">
+	<h1 id="title"><%= @movie.title %></h1>
+	<h2 id="year"><%= @movie.year %> <%=@movie.director %></h2>
+	<div id="rating">
+		<p><%= calculate_rating(@reviews) %></p>
+	</div>
+	<p id="description"><%= @movie.description %></p>
+</div>
 
-<%= link_to 'Back', movies_path %>
+<div class="review-container">
+	<h3>Reviews</h3>
+	<% @reviews.each do |review|%>
+		<div class="review">
+			<h4><%= link_to "#{review.user.name} says...", review %></h4>
+			<p id="score"><%= review.score %>/10</p>
+			<%= thumbs_up_down(review.judgement) %>
+		</div>
+	<% end %>
+</div>
+
+<div class="nav">
+	<button><%= link_to @seen_text, seen_movie_path, method: :put %></button>
+	<button><%= link_to 'Review movie', new_review_path(:movie_id => @movie.id) %></button>
+</div>
+
+<div class="nav">
+	<% if current_user.is_admin %>
+		<button><%= link_to 'Edit movie', edit_movie_path(@movie) %></button>
+		<button><%= link_to 'Delete movie', @movie, method: :delete %></button>
+		<button><%= link_to 'Back', movies_path %></button>
+	<% end %>
+</div>

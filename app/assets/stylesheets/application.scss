@@ -67,3 +67,72 @@ ul.hmenu li {
 	width: 100%;
 	border: solid black 1px;
 }
+
+.thumb {
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+}
+
+#score {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+}
+
+.nav {
+	margin-left: 10px;
+	margin-top: 30px;
+}
+
+.review {
+	margin: 35px 10px;
+	border: solid black;
+	width: 400px;
+	padding: 10px 10px;
+}
+
+.movie-show {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+#title {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#year {
+	display: inline-block;
+	font-style: italic;
+}
+
+#rating {
+	display: inline-block;
+	border-radius: 100%;
+	background-color: limegreen;
+	margin-left: 20px;
+	padding: 10px 36px 7px 32px;
+}
+
+#rating p {
+	font-size: 60px;
+	color: ghostwhite;
+}
+
+#description {
+	font-size: 17px;
+	margin-top: 15px;
+}
+
+h3 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.review-container {
+	margin-top: 50px;
+}
+
+button {
+	border-radius: 10%;
+}
