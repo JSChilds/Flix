@@ -4,22 +4,32 @@
     <title>Flix</title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'%>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <ul class="hmenu">
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-    </ul>
-    <nav>
-      <li><%= link_to "Movies", movies_path %></li>
-      <li><%= link_to "Add New Movie", new_movie_path %></li>
-      <li><%= link_to "Users", users_path %></li>
-    </nav>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+          <ul class="hmenu">
+            <%= render 'devise/menu/registration_items' %>
+            <%= render 'devise/menu/login_items' %>
+          </ul>
+          <nav>
+            <li><%= link_to "Movies", movies_path %></li>
+            <li><%= link_to "Add New Movie", new_movie_path %></li>
+            <li><%= link_to "Users", users_path %></li>
+          </nav>
+        	<p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          </div>
+        </div>
+    </div>
+      <%= yield %>
   </body>
 </html>
