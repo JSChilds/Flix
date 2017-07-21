@@ -1,15 +1,17 @@
-<h1><%= @user.name %></h1>
-<p>Email: <%= @user.email %></p>
-<% if current_user.id == @user.id %>
-	<br>
-   	<%= link_to('Edit user details', edit_user_registration_path) %>
-<% end %>
-<h2><%= @user.name %> has seen...</h2>
-<% @user.movies.each do |movie| %>
-	<li><%= link_to movie.title, movie_path %></li>
-<% end %>
+<div class="user-container">
+	<h1><%= @user.name %></h1>
+	<p>Email: <%= @user.email %></p>
+	<% if current_user.id == @user.id %>
+		<br>
+	   	<%= link_to('Edit user details', edit_user_registration_path) %>
+	<% end %>
+	<h2><%= @user.name %> has seen...</h2>
+	<% @user.movies.each do |movie| %>
+		<li><%= link_to movie.title, movie_path %></li>
+	<% end %>
 
-<h2><%= @user.name %> has written reviews for...</h2>
-<% @user.reviews.each do |review| %>
-	<li><%= link_to review.movie.title, movie_path %></li>
-<% end %>
+	<h2><%= @user.name %> has written reviews for...</h2>
+	<% @user.reviews.each do |review| %>
+		<li><%= link_to review.movie.title, movie_path %></li>
+	<% end %>
+</div>

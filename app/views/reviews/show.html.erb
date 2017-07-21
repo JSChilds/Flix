@@ -1,7 +1,7 @@
 <h2><%= link_to @review.user.name, @review.user %></h2>
 <p>Score: <%= @review.score %>/10</p>
 <p><%= @review.comment %></p>
-<p><%= ></p>
+<p><%= thumbs_up_down(@review.judgement) %></p>
 <% if current_user.id == @review.user_id %>
 	<button><%= link_to 'Edit review', edit_review_path(@review) %></button>
 	<button><%= link_to 'Delete review', @review, method: :delete %></button>

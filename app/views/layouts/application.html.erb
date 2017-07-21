@@ -14,38 +14,40 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">    
-          <ul class="hmenu">
-            <div class="col-sm-4">
-              <div class="logo-tile">
-                <%= image_tag "logo.png", class: "logo" %>
-              </div>
-            </div>
+    <div class="main-container">
+      <div class="nav-container">
+        <div class="row">    
+            <ul class="hmenu">
 
-            <%= render 'devise/menu/login_items' %>
-            <%= render 'devise/menu/registration_items' %>
-
-            <div class="col-sm-1">
-              <div class="nav-tile">
-                <%= link_to "Movies", movies_path %>
+              <div class="col-sm-3">
+                <div class="logo-tile">
+                  <%= image_tag "logo.png", class: "logo" %>
+                </div>
               </div>
-            </div>
 
-            <div class="col-sm-1">
-              <div class="nav-tile">
-                <%= link_to "Add Movie", new_movie_path %>
-              </div>
-            </div>
+              <%= render 'devise/menu/login_items' %>
+              <%= render 'devise/menu/registration_items' %>
+                <div class="col-sm-2">
+                  <div class="nav-tile">
+                    <%= link_to "Movies", movies_path %>
+                  </div>
+                </div>
 
-            <div class="col-sm-1">
-              <div class="nav-tile">
-                <%= link_to "Users", users_path %>
-              </div>
+                <div class="col-sm-2">
+                  <div class="nav-tile">
+                    <%= link_to "Add Movie", new_movie_path %>
+                  </div>
+                </div>
+
+                <div class="col-sm-1">
+                  <div class="nav-tile">
+                    <%= link_to "Users", users_path %>
+                  </div>
+                </div>
+              </ul>
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
             </div>
-          </ul>
-        	<p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
           </div>
       </div>
       <%= yield %>

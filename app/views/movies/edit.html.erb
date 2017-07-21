@@ -1,5 +1,7 @@
-<h1>Edit <%= @movie.title %></h1>
+<div class="form-container">
+	<h1>Edit <%= @movie.title %></h1>
 
-<%= render "form", movie: @movie %>
+	<%= render "form", movie: @movie %>
 
-<%= link_to 'Back', @movie %>
+	<button><%= link_to 'Back', @movie %></button>
+</div>

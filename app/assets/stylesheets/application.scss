@@ -17,6 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	font-family: verdana;
+	color: #15DEAD;
+	background-image: url("background2.png");
+}
+
 nav {
 	list-style: none;
 	display: inline;
@@ -44,17 +50,16 @@ ul.hmenu li {
 	width: 100px;
 	height: 200px;
 	text-align: center;
-	border: solid black 1px;
-	padding-top: 100px;
+	padding-top: 150px;
+	font-size: 18px;
 }
 
-.container {
+.main-container {
 	width: 100%;
 	height: 100%;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	display: block;
-	background-color: silver;
 }
 
 .logo {
@@ -65,7 +70,6 @@ ul.hmenu li {
 .logo-tile {
 	height: 200px;
 	width: 100%;
-	border: solid black 1px;
 }
 
 .thumb {
@@ -86,9 +90,10 @@ ul.hmenu li {
 
 .review {
 	margin: 35px 10px;
-	border: solid black;
 	width: 400px;
 	padding: 10px 10px;
+	border-radius: 7%;
+	background-color: #C9CFCD;
 }
 
 .movie-show {
@@ -135,4 +140,28 @@ h3 {
 
 button {
 	border-radius: 10%;
+}
+
+.user-container {
+	margin-left: 15px;
+}
+
+.users-container {
+	margin-left: 15px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.form-container {
+	margin-left: 15px;
+}
+
+.field {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.nav-container {
+	background-color: #15DEAD;
+	border-style: outset;
 }

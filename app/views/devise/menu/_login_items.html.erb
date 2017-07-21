@@ -1,17 +1,17 @@
 <% if user_signed_in? %>
-  <div class="col-sm-1">
+  <div class="col-sm-2">
   	<div class="nav-tile">
   		<li> <%= link_to('Sign out', destroy_user_session_path, method: :delete) %></li>
   	</div>
   </div>
 
-   <div class="col-sm-1">
+   <div class="col-sm-2">
    	<div class="nav-tile">
    		<li><%= link_to('My Profile', current_user) %></li>
    	</div>
    </div>
 <% else %>
-  <div class="col-sm-1">
+  <div class="col-sm-2">
   	<div class="nav-tile">
   		<li><%= link_to('Sign in', new_user_session_path)  %></li>
   	</div>
