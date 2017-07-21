@@ -31,6 +31,11 @@
 	    <%= form.text_field :description, id: :movie_description %>
 	  </div>
 
+	   <div class="field">
+	    <%= form.label :image %>
+	    <%= form.file_field :image, id: :movie_image %>
+	  </div>
+
 	  <div class="actions">
 	    <button><%= form.submit %></button>
 	  </div>

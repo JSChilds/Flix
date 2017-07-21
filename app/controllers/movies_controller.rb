@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+	before_action :set_upload, only: [:show, :edit, :update, :destroy]
 	def index
 		@movies = Movie.all
 	end
@@ -58,7 +59,11 @@ class MoviesController < ApplicationController
 
 
 	private
+		def set_upload
+	      @movie = Movie.find(params[:id])
+	    end
+
 		def movie_params
-	      params.require(:movie).permit(:title, :year, :director, :description)
+	      params.require(:movie).permit(:title, :year, :director, :description, :image)
 	    end
 end

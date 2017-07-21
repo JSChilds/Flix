@@ -8,6 +8,9 @@ end
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'carrierwave', '0.10.0'
+gem 'mini_magick'
+gem 'fog'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170718131430) do
     t.integer "year"
     t.string "description"
     t.string "director"
+    t.string "image"
     t.integer "rating", default: 0
   end
 
