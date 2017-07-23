@@ -20,8 +20,10 @@ class MoviesController < ApplicationController
 
 	def edit
 		@movie = Movie.find(params[:id])
-		if !current_user.is_admin
-			redirect_to movies_path
+		if user_signed_in?
+			if !current_user.is_admin
+				redirect_to movies_path
+			end
 		end
 	end
 

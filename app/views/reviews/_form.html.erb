@@ -13,17 +13,17 @@
 
 	  <div class="field">
 	    <%= form.label :comment %>
-	    <%= form.text_field :comment, id: :review_comment %>
+	    <%= form.text_field :comment, id: :review_comment, :required => 'required' %>
 	  </div>
 
 	  <div class="field">
 	    <%= form.label :score %>
-	    <%= form.number_field :score, id: :review_score %>
+	    <%= form.number_field :score, id: :review_score, :required => 'required' %>
 	  </div>
 
 	  <div class="field">
 	    <%= form.label :Recommend? %>
-	    <%= form.check_box :judgement, id: :review_judgement %>
+	    <%= form.check_box :judgement, id: :review_judgement, :required => 'required' %>
 	   </div>
 
 	  <div class="actions">

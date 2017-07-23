@@ -13,7 +13,7 @@
 
 	  <div class="field">
 	    <%= form.label :title %>
-	    <%= form.text_field :title, id: :movie_name %>
+	    <%= form.text_field :title, id: :movie_name, :required => 'required' %>
 	  </div>
 
 	  <div class="field">
@@ -33,7 +33,7 @@
 
 	   <div class="field">
 	    <%= form.label :image %>
-	    <%= form.file_field :image, id: :movie_image %>
+	    <%= form.file_field :image, id: :movie_image, :required => 'required' %>
 	  </div>
 
 	  <div class="actions">

@@ -22,12 +22,13 @@ class ReviewsController < ApplicationController
 		@review = Review.create(review_params)
 		@review.user_id = current_user.id
 		@review.save
-		redirect_to movies_path
+		redirect_to movie_path(@review.movie_id)
 	end
 
 	def update
 		@review = Review.find(params[:id])
 		@review.update(review_params)
+		redirect_to movie_path(@review.movie_id)
 	end
 
 	def destroy

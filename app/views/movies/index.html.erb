@@ -1,14 +1,11 @@
 <div class="row">
 	<% @movies.each do |movie| %>
-		<div class="col-md-3">
-			<div class="movie-tile">
-				<h1><%= link_to movie.title, movie %></h1>
-				<p><%= movie.year %></p>
-				<p><%= image_tag movie.image %></p>
-				<p><%= movie.director %></p>
-				<p>Rating: <%= calculate_rating(movie.reviews) %>/10</p>
-				<p><%= movie.reviews.length %> reviews</p>
+		<%= link_to movie_path(movie) do %> 
+			<div class="col-md-3">
+				<div class="movie-tile">
+					<%= image_tag movie.image, class: "poster" %>
+				</div>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
 </div>
