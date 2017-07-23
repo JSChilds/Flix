@@ -2,8 +2,10 @@
 <p>Score: <%= @review.score %>/10</p>
 <p><%= @review.comment %></p>
 <p><%= thumbs_up_down(@review.judgement) %></p>
-<% if current_user.id == @review.user_id %>
-	<button><%= link_to 'Edit review', edit_review_path(@review) %></button>
-	<button><%= link_to 'Delete review', @review, method: :delete %></button>
+<% if user_signed_in? %>
+	<% if current_user.id == @review.user_id %>
+		<button><%= link_to 'Edit review', edit_review_path(@review) %></button>
+		<button><%= link_to 'Delete review', @review, method: :delete %></button>
+	<% end %>
 <% end %>
 <button><%= link_to "Back", @review.movie %></button>
