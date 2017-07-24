@@ -1,7 +1,7 @@
 <div class="row">
 	<% @movies.each do |movie| %>
 		<%= link_to movie_path(movie) do %> 
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div class="movie-tile">
 					<%= image_tag movie.image, class: "poster" %>
 				</div>

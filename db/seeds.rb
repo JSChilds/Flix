@@ -27,7 +27,7 @@ movie1 = Movie.create!({
 movie2 = Movie.create!({
 	title: "Inception",
 	year: 2010,
-	description: "A theif who enters people's dreams must perform the seemingly-impossible act of inception if he ever wants to see his children again.",
+	description: "A thief who enters people's dreams must perform the seemingly-impossible act of inception if he ever wants to see his children again.",
 	director: "Christopher Nolan",
 	image: "https://www.warnerbros.com/sites/default/files/styles/juicebox_medium/public/inception_posterlarge_0-587516945.jpg?itok=6RMGrVuA",
 	rating: 9
