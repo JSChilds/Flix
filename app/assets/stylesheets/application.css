@@ -19,7 +19,7 @@
 
 body {
 	font-family: verdana;
-	color: #15DEAD;
+	color: #009973;
 	background-image: url("greybackground.png");
 }
 
@@ -179,9 +179,10 @@ button {
 }
 
 button:hover {
-	border: solid green 1px;
+	border: solid #009973 3px;
 }
 
 .movie-tile:hover {
-	border: solid green 1px;
+	border: solid #009973 2px;
+	opacity: 0.5;
 }

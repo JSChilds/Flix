@@ -8,12 +8,15 @@
 			</div>
 		</div>
 	</div>
-	<% if @reviews.length > 0 %>
-		<div id="rating">
-			<p><%= calculate_rating(@reviews) %></p>
-		</div>
-	<% end %>
-	<p id="description"><%= @movie.description %></p>
+
+	<div class="col-md-7">
+		<% if @reviews.length > 0 %>
+			<div id="rating">
+				<p><%= calculate_rating(@reviews) %></p>
+			</div>
+		<% end %>
+		<p id="description"><%= @movie.description %></p>
+	</div>
 </div>
 
 <div class="review-container">
