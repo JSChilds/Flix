@@ -1,5 +1,7 @@
 # FLIX
 
+![Screenshot of the main index page for Flix](https://github.com/JSChilds/Flix/blob/master/app/assets/images/index_page.png)
+
 A movie review web app. Users can add movies, say whether they've seen existing movies, and add movie reviews.
 
 ## Technologies
