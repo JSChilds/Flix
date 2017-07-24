@@ -20,7 +20,7 @@ movie1 = Movie.create!({
 	year: 1985,
 	description: "A teenager from 1985 travels back in time to 1955 and has to help his parents fall in love.",
 	director: "Robert Zemeckis",
-	image: "http://vignette1.wikia.nocookie.net/bttf/images/5/52/Back_to_the_future.jpg/revision/latest/scale-to-width-down/2000?cb=20150928161335",
+	image: File.new("app/assets/images/BTTF.png"),
 	rating: 9
 })
 
@@ -29,7 +29,7 @@ movie2 = Movie.create!({
 	year: 2010,
 	description: "A thief who enters people's dreams must perform the seemingly-impossible act of inception if he ever wants to see his children again.",
 	director: "Christopher Nolan",
-	image: "https://www.warnerbros.com/sites/default/files/styles/juicebox_medium/public/inception_posterlarge_0-587516945.jpg?itok=6RMGrVuA",
+	image: File.new("app/assets/images/Inception.png"),
 	rating: 9
 })
 
@@ -38,7 +38,7 @@ movie3 = Movie.create!({
 	year: 1995,
 	description: "Robin Williams gets sucked into a board game and there are CGI animals.",
 	director: "Joe Johnston",
-	image: "https://www.movieposter.com/posters/archive/main/68/MPW-34112",
+	image: File.new("app/assets/images/Jumanji.png"),
 	rating: 5
 })
 
@@ -47,7 +47,7 @@ movie4 = Movie.create!({
 	year: 1976,
 	description: "A socially-awkward taxi driver edges towards violent madness in 1970s New York.",
 	director: "Martin Scorsese",
-	image: "http://www.sonypicturesmuseum.com/public/uploads/collectionasset/image/taxi-driver-POSTER@2x.jpg",
+	image: File.new("app/assets/images/TaxiDriver.png"),
 	rating: 8
 })
 
