@@ -1,24 +1,18 @@
-# README
+# FLIX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A movie review web app. Users can add movies, say whether they've seen existing movies, and add movie reviews.
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+Made with Ruby on Rails, including HTML, CSS and JavaScript.
 
-* System dependencies
+Utilising AWS and S3 for uploading images.
 
-* Configuration
+* ruby 2.4.1p111
+* Rails 5.1.2
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Gems Included
+* Devise
+* Bootstrap
+* fog
+* mini-magick
